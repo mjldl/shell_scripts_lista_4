@@ -1,0 +1,31 @@
+echo  a   Remova  odas as le  as do a quivo. 
+echo  b   Remova  odos os dígi os do a quivo. 
+echo  c   Subs i ua  odos os ca a e es que não são le  as e nem dígi os do a quivo po  $ 
+echo  q   Saia do sc ip . 
+
+ ead  p "Digi e uma opção: " p ocess
+case $p ocess in
+	a)
+		clea 
+		echo  e  Removendo  odas as le  as...\n 
+		sleep 1
+		ca  $a quivo   sed     s  a zA Z *  g 
+		;;
+	b)
+		clea 
+		echo  e  Removendo  odos os dígi os...\n 
+		sleep 1
+		ca  $a quivo   sed     s  0 9 *  g 
+		;;
+	c)
+		clea 
+		echo  e  Subs i uindo  odos os ca ac e es que não são le  as e nem dígi os po  $\n 
+		sleep 1
+		ca  $a quivo   sed  s  s  \,\.\*\!\@\<\>\^\"\{\}\ \+\#\&\(\)\;\:\ \ \\=\% * $ g 
+		;;
+	q)
+		clea 
+		echo  e  Saindo do sc ip ...\n 
+		;;
+	*)
+esac
